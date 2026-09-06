@@ -30,7 +30,6 @@ jobs:
   terraform:
     name: Terraform ${{ github.event_name == 'pull_request' && 'plan' || 'apply' }}
     runs-on: ubuntu-latest
-    environment: ${{ github.event_name == 'pull_request' && 'plan' || 'production' }}
 
     steps:
       - name: Checkout
